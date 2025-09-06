@@ -1,0 +1,53 @@
+# -----------------------------
+# Build output
+# -----------------------------
+dist/
+.astro/
+
+# -----------------------------
+# Dependencies
+# -----------------------------
+node_modules/
+
+# -----------------------------
+# Logs
+# -----------------------------
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# -----------------------------
+# Environment variables
+# -----------------------------
+.env
+.env.production
+.env.local
+.env.*.local
+
+# -----------------------------
+# Editors / IDEs
+# -----------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# -----------------------------
+# OS-specific files
+# -----------------------------
+.DS_Store
+Thumbs.db
+
+# -----------------------------
+# Deployment / Hosting
+# -----------------------------
+.vercel/
+.netlify/
+
+# -----------------------------
+# Lockfiles (optional)
+# -----------------------------
+# Uncomment to ignore lockfiles you don’t use
+# yarn.lock
+# pnpm-lock.yaml
