@@ -23,9 +23,9 @@ const posts = {
     date: 'May 15, 2025',
     author: 'Sarah Johnson',
     authorRole: 'Product Manager',
-    authorAvatar: 'https://randomuser.me/api/portraits/women/32.jpg',
+    authorAvatar: '/images/placeholder.jpg', // TODO: add asset locally
     category: 'Product Updates',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+    image: '/images/placeholder.jpg', // TODO: add asset locally
     content: `
       <p class="mb-4">We're excited to announce the release of our new dashboard features designed to help you gain deeper insights into your business performance. These updates are based on feedback from our users and are aimed at making data analysis more intuitive and actionable.</p>
       
@@ -79,9 +79,9 @@ const posts = {
     date: 'April 28, 2025',
     author: 'Michael Chen',
     authorRole: 'CTO',
-    authorAvatar: 'https://randomuser.me/api/portraits/men/46.jpg',
+    authorAvatar: '/images/placeholder.jpg', // TODO: add asset locally
     category: 'New Features',
-    image: 'https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+    image: '/images/placeholder.jpg', // TODO: add asset locally
     content: `
       <p class="mb-4">Today marks an exciting milestone for our platform as we launch our mobile app for iOS and Android devices. Now you can access your workspace from anywhere, ensuring you never miss an important update or opportunity.</p>
       
@@ -151,9 +151,9 @@ const posts = {
     date: 'April 10, 2025',
     author: 'Emily Rodriguez',
     authorRole: 'Lead Developer',
-    authorAvatar: 'https://randomuser.me/api/portraits/women/65.jpg',
+    authorAvatar: '/images/placeholder.jpg', // TODO: add asset locally
     category: 'Developer Updates',
-    image: 'https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+    image: '/images/placeholder.jpg', // TODO: add asset locally
     content: `
       <p class="mb-4">We're excited to announce significant improvements to our API along with new endpoints to help developers build more powerful integrations with our platform.</p>
       
@@ -171,7 +171,7 @@ const posts = {
       
       <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg mb-8 overflow-x-auto">
         <h3 class="text-xl font-semibold mb-3">Example Request</h3>
-        <pre class="text-sm bg-gray-900 text-green-400 p-4 rounded-sm"><code>curl -X GET "https://api.saasify.com/v2/users" \\
+        <pre class="text-sm bg-gray-900 text-green-400 p-4 rounded-sm"><code>curl -X GET "https://api.example.com/v2/users" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"</code></pre>
       </div>
@@ -232,9 +232,9 @@ const posts = {
     date: 'March 22, 2025',
     author: 'David Wilson',
     authorRole: 'Product Designer',
-    authorAvatar: 'https://randomuser.me/api/portraits/men/22.jpg',
+    authorAvatar: '/images/placeholder.jpg', // TODO: add asset locally
     category: 'Product Updates',
-    image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+    image: '/images/placeholder.jpg', // TODO: add asset locally
     content: `
       <p class="mb-4">We're thrilled to announce a major update to our collaboration features, designed to help teams work together more effectively and efficiently.</p>
       
@@ -314,11 +314,11 @@ const posts = {
     date: 'March 5, 2025',
     author: 'Jessica Lee',
     authorRole: 'Security Officer',
-    authorAvatar: 'https://randomuser.me/api/portraits/women/45.jpg',
+    authorAvatar: '/images/placeholder.jpg', // TODO: add asset locally
     category: 'Security',
-    image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+    image: '/images/placeholder.jpg', // TODO: add asset locally
     content: `
-      <p class="mb-4">At SaaSify, security is our top priority. We're pleased to announce several important security enhancements and compliance updates that further strengthen the protection of your data.</p>
+      <p class="mb-4">At Parker Automation, security is our top priority. We're pleased to announce several important security enhancements and compliance updates that further strengthen the protection of your data.</p>
       
       <h2 class="text-2xl font-semibold mb-4 mt-8">Enhanced Authentication</h2>
       
@@ -363,19 +363,19 @@ const posts = {
       
       <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
         <div class="bg-white dark:bg-gray-800 p-4 rounded-lg flex items-center justify-center">
-          <img src="https://via.placeholder.com/100x60?text=ISO+27001" alt="ISO 27001 Certification" class="max-h-12" />
+          <img src="/images/placeholder.jpg" alt="ISO 27001 Certification" class="max-h-12" /> <!-- TODO: add asset locally -->
         </div>
         <div class="bg-white dark:bg-gray-800 p-4 rounded-lg flex items-center justify-center">
-          <img src="https://via.placeholder.com/100x60?text=SOC+2" alt="SOC 2 Certification" class="max-h-12" />
+          <img src="/images/placeholder.jpg" alt="SOC 2 Certification" class="max-h-12" /> <!-- TODO: add asset locally -->
         </div>
         <div class="bg-white dark:bg-gray-800 p-4 rounded-lg flex items-center justify-center">
-          <img src="https://via.placeholder.com/100x60?text=HIPAA" alt="HIPAA Compliance" class="max-h-12" />
+          <img src="/images/placeholder.jpg" alt="HIPAA Compliance" class="max-h-12" /> <!-- TODO: add asset locally -->
         </div>
         <div class="bg-white dark:bg-gray-800 p-4 rounded-lg flex items-center justify-center">
-          <img src="https://via.placeholder.com/100x60?text=GDPR" alt="GDPR Compliance" class="max-h-12" />
+          <img src="/images/placeholder.jpg" alt="GDPR Compliance" class="max-h-12" /> <!-- TODO: add asset locally -->
         </div>
         <div class="bg-white dark:bg-gray-800 p-4 rounded-lg flex items-center justify-center">
-          <img src="https://via.placeholder.com/100x60?text=PCI+DSS" alt="PCI DSS Certification" class="max-h-12" />
+          <img src="/images/placeholder.jpg" alt="PCI DSS Certification" class="max-h-12" /> <!-- TODO: add asset locally -->
         </div>
       </div>
       
@@ -423,9 +423,9 @@ const posts = {
     date: 'February 18, 2025',
     author: 'Robert Kim',
     authorRole: 'Partnership Manager',
-    authorAvatar: 'https://randomuser.me/api/portraits/men/67.jpg',
+    authorAvatar: '/images/placeholder.jpg', // TODO: add asset locally
     category: 'Integrations',
-    image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+    image: '/images/placeholder.jpg', // TODO: add asset locally
     content: `
       <p class="mb-4">We're excited to announce the launch of our Integration Marketplace, featuring over 50 partner integrations that extend the functionality of our platform and connect with your favorite tools and services.</p>
       
@@ -578,7 +578,7 @@ const post = posts[slug];
 if (!post) return Astro.redirect('/404');
 ---
 
-<Layout title={`${post.title} - SaaSify Blog`} description={post.title}>
+<Layout title={`${post.title} - Parker Automation Blog`} description={post.title}>
   <Header />
   <main>
     <article class="pt-32 pb-16 md:pt-40 md:pb-24">

@@ -3,15 +3,16 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import HeroSection from '../components/HeroSection.astro';
+import site from '../config/site';
 ---
 
-<Layout title="Terms & Conditions - Sassify">
+<Layout title={`Terms & Conditions - ${site.name}`} description="TODO: Terms and conditions description">
   <Header />
   <main>
-    <HeroSection 
-      title="Terms & Conditions" 
+    <HeroSection
+      title="Terms & Conditions"
       highlightText="Terms"
-      description="Please read these terms and conditions carefully before using our service."
+      description="TODO: Last updated date"
     />
     
     <section class="py-12 bg-white dark:bg-gray-800">
@@ -19,12 +20,12 @@ import HeroSection from '../components/HeroSection.astro';
         <div class="prose prose-lg dark:prose-invert max-w-4xl mx-auto">
           <h2>1. Introduction</h2>
           <p>
-            Welcome to Sassify. These Terms & Conditions govern your use of our website and services. By accessing or using our services, you agree to be bound by these Terms.
+            Welcome to {site.name}. These Terms & Conditions govern your use of our website and services. By accessing or using our services, you agree to be bound by these Terms.
           </p>
           
           <h2>2. Definitions</h2>
           <p>
-            "Service" refers to the Sassify platform and all related services.
+            "Service" refers to the {site.name} platform and all related services.
             "User" refers to any individual or entity that accesses or uses our Service.
             "Content" refers to all information and materials available on our Service.
           </p>
@@ -41,7 +42,7 @@ import HeroSection from '../components/HeroSection.astro';
           
           <h2>5. Intellectual Property</h2>
           <p>
-            All content, features, and functionality of our Service are owned by Sassify and are protected by international copyright, trademark, patent, trade secret, and other intellectual property laws.
+            All content, features, and functionality of our Service are owned by {site.name} and are protected by international copyright, trademark, patent, trade secret, and other intellectual property laws.
           </p>
           
           <h2>6. Privacy Policy</h2>
@@ -51,7 +52,7 @@ import HeroSection from '../components/HeroSection.astro';
           
           <h2>7. Limitation of Liability</h2>
           <p>
-            In no event shall Sassify be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses.
+            In no event shall {site.name} be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses.
           </p>
           
           <h2>8. Changes to Terms</h2>
@@ -61,13 +62,14 @@ import HeroSection from '../components/HeroSection.astro';
           
           <h2>9. Governing Law</h2>
           <p>
-            These Terms shall be governed by and construed in accordance with the laws of [Your Jurisdiction], without regard to its conflict of law provisions.
+            These Terms shall be governed by and construed in accordance with the laws of TODO: Jurisdiction, without regard to its conflict of law provisions.
           </p>
           
           <h2>10. Contact Us</h2>
           <p>
-            If you have any questions about these Terms, please contact us at support@sassify.com.
+            If you have any questions about these Terms, please <a href="/contact">contact us</a> or email us at {site.contact.email ?? 'TODO: email'}.
           </p>
+          <p><!-- TODO: Add jurisdiction information --></p>
         </div>
       </div>
     </section>

@@ -1,8 +1,6 @@
-![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/larry-xue/astro-sassify-template?utm_source=oss&utm_medium=github&utm_campaign=larry-xue%2Fastro-sassify-template&labelColor=171717&color=FF570A&link=https%3A%2F%2Fcoderabbit.ai&label=CodeRabbit+Reviews)
+# Parker Automation Website
 
-# Astro Sassify Template
-
-A modern, responsive Astro template with Tailwind CSS and Alpine.js integration. This template provides a solid foundation for building fast, SEO-friendly websites with a clean design system.
+Starter repository for the Parker Automation marketing site built with Astro and Tailwind CSS. TODO: fill in project details and deployment instructions.
 
 ## 🚀 Features
 
@@ -19,8 +17,7 @@ A modern, responsive Astro template with Tailwind CSS and Alpine.js integration.
 
 ```text
 /
-├── public/             # Static assets
-│   └── favicon.svg
+├── public/             # Static assets (add images locally)
 ├── src/
 │   ├── assets/         # Images and other assets
 │   ├── components/     # Reusable UI components
@@ -51,7 +48,7 @@ All commands are run from the root of the project, from a terminal:
 
 ### Colors
 
-The template includes a custom color palette defined in `src/styles/global.css`:
+A custom color palette is defined in `src/styles/global.css`:
 
 - Primary: Purple-based color scheme
 - Secondary: Slate-based color scheme
@@ -62,7 +59,7 @@ You can customize these colors by editing the `src/styles/global.css` file.
 
 ### Typography
 
-The template uses the following font families:
+This project uses the following font families (replace as needed):
 
 - Sans: Inter (with system fallbacks)
 - Display: Lexend (with system fallbacks)
@@ -74,37 +71,22 @@ Custom animations are included:
 - Slide Up
 - Slide Down
 
-## 🚀 Getting Started
-
-There are two ways to use this template:
-
-### Option 1: Using Astro CLI (Recommended)
-
-Create a project directly with Astro's official CLI tool:
-
-```bash
-npm create astro@latest -- --template larry-xue/astro-sassify-template
-```
-
-### Option 2: Manual Clone
+## Getting Started
 
 1. Clone this repository
    ```bash
-   git clone https://github.com/larry-xue/astro-sassify-template.git my-project
-   cd my-project
+   git clone https://github.com/parkerautomation/parker-site.git
+   cd parker-site
    ```
-
 2. Install dependencies
    ```bash
    npm install
    ```
-
 3. Start the development server
    ```bash
    npm run dev
    ```
-
-4. Visit `http://localhost:4321` in your browser to see your site
+4. Visit `http://localhost:4321` in your browser to see the site
 
 ## 📝 License
 

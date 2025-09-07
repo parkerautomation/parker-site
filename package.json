@@ -1,12 +1,12 @@
 {
-  "name": "parker-site",
-  "description": "A template for creating a SaaS landing page with Astro and Tailwind CSS",
-  "author": "Larry Xue",
+  "name": "parker-automation-site",
+  "description": "Parker Automation marketing website",
+  "author": "Parker Automation",
   "license": "MIT",
-  "homepage": "https://astro-sassify.larryxue.dev/",
+  "homepage": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/larry-xue/astro-sassify-template.git"
+    "url": "https://github.com/parkerautomation/parker-site"
   },
   "type": "module",
   "version": "1.0.0",
@@ -14,7 +14,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro build && astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "test": "echo \"No tests yet\" && exit 0"
   },
   "dependencies": {
     "@astrojs/alpinejs": "^0.4.8",

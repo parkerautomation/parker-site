@@ -2,6 +2,14 @@
 
 @custom-variant dark (&:is(.dark *));
 
+:root {
+  --brand: #000000; /* TODO: set brand color */
+  --brand-foreground: #ffffff; /* TODO: set brand foreground */
+  --brand-contrast: #ffffff; /* TODO: set brand contrast */
+  --font-body: 'TODO Body Font', system-ui, sans-serif;
+  --font-display-family: 'TODO Display Font', system-ui, sans-serif;
+}
+
 @theme {
   --color-primary-50: #f5f3ff;
   --color-primary-100: #ede9fe;
@@ -51,8 +59,8 @@
   --color-warning-900: #713f12;
   --color-warning-950: #422006;
 
-  --font-sans: Inter, system-ui, sans-serif;
-  --font-display: Lexend, system-ui, sans-serif;
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display-family);
 
   --animate-fade-in: fadeIn 0.5s ease-in-out;
   --animate-slide-up: slideUp 0.5s ease-in-out;
@@ -86,6 +94,14 @@
       opacity: 1;
     }
   }
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+  .font-display {
+  font-family: var(--font-display-family);
 }
 
 /*

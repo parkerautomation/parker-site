@@ -3,21 +3,22 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import HeroSection from '../components/HeroSection.astro';
+import site from '../config/site';
 ---
 
-<Layout title="Privacy Policy - Sassify">
+<Layout title={`Privacy Policy - ${site.name}`} description="TODO: Privacy policy description">
   <Header />
   <main>
-    <HeroSection 
-      title="Privacy Policy" 
-      description="Last updated: June 1, 2023"
+    <HeroSection
+      title="Privacy Policy"
+      description="Last updated: TODO"
     />
     
     <section class="py-16">
       <div class="container-custom">
         <div class="max-w-3xl mx-auto prose dark:prose-invert prose-headings:font-display prose-headings:font-semibold prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-img:rounded-lg">
           <p class="lead">
-            At Sassify, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our service.
+            At {site.name}, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our service.
           </p>
           
           <h2>Information We Collect</h2>
@@ -84,8 +85,9 @@ import HeroSection from '../components/HeroSection.astro';
           
           <h2>Contact Us</h2>
           <p>
-            If you have any questions about this Privacy Policy, please <a href="/contact">contact us</a>.
+            If you have any questions about this Privacy Policy, please <a href="/contact">contact us</a> or email us at {site.contact.email ?? 'TODO: email'}.
           </p>
+          <p><!-- TODO: Add jurisdiction and last updated date --></p>
         </div>
       </div>
     </section>
