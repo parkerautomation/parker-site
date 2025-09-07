@@ -2,16 +2,18 @@
 import '../styles/global.css';
 import '../styles/transitions.css';
 import { ClientRouter } from 'astro:transitions';
+import site from '../config/site';
 
 export interface Props {
-  title: string;
+  title?: string;
   description?: string;
 }
 
-const { 
-  title, 
-  description = "Modern SaaS landing page template with responsive design and modular sections."
+const {
+  title = site.name,
+  description = site.description,
 } = Astro.props;
+
 ---
 
 <!doctype html>
@@ -19,7 +21,7 @@ const {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href={site.logoPath} />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
     <title>{title}</title>
