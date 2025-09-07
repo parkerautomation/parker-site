@@ -19,7 +19,6 @@ const {
 const canonical = site.url
   ? new URL(Astro.url.pathname, site.url).toString()
   : undefined;
-
 ---
 
 <!doctype html>
@@ -27,21 +26,21 @@ const canonical = site.url
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href={site.logoPath} /> <!-- TODO: add asset locally -->
+    <link rel="icon" type="image/svg+xml" href={site.logoPath} /> {/* TODO: add asset locally */}
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <meta name="description" content={description} />
     {canonical && <link rel="canonical" href={canonical} />}
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={ogImage} /> <!-- TODO: add asset locally -->
+    <meta property="og:image" content={ogImage} /> {/* TODO: add asset locally */}
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={ogImage} /> <!-- TODO: add asset locally -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="twitter:image" content={ogImage} /> {/* TODO: add asset locally */}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <ClientRouter />
   </head>
   <body class="antialiased bg-white dark:bg-secondary-950 text-secondary-900 dark:text-secondary-100 transition-colors duration-300">
@@ -62,7 +61,6 @@ const canonical = site.url
 
       // Handle page transitions
       document.addEventListener('astro:page-load', () => {
-        // This runs on initial page load and after each navigation
         const pageWrapper = document.getElementById('page-wrapper');
         if (pageWrapper) {
           pageWrapper.classList.add('page-loaded');
@@ -70,7 +68,6 @@ const canonical = site.url
       });
 
       document.addEventListener('astro:before-swap', () => {
-        // This runs before the new page content is swapped in
         const pageWrapper = document.getElementById('page-wrapper');
         if (pageWrapper) {
           pageWrapper.classList.remove('page-loaded');
