@@ -3,17 +3,18 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --color-primary-50: #f5f3ff;
-  --color-primary-100: #ede9fe;
-  --color-primary-200: #ddd6fe;
-  --color-primary-300: #c4b5fd;
-  --color-primary-400: #a78bfa;
-  --color-primary-500: #8b5cf6;
-  --color-primary-600: #7c3aed;
-  --color-primary-700: #6d28d9;
-  --color-primary-800: #5b21b6;
-  --color-primary-900: #4c1d95;
-  --color-primary-950: #2e1065;
+  --color-primary-50:  #faf5ff;
+  --color-primary-100: #f3e8ff;
+  --color-primary-200: #e9d5ff;
+  --color-primary-300: #d8b4fe;
+  --color-primary-400: #c084fc;
+  --color-primary-500: #a855f7;
+  --color-primary-600: #9333ea;
+  --color-primary-700: #7e22ce;
+  --color-primary-800: #6b21a8;
+  --color-primary-900: #581c87;
+  --color-primary-950: #3b0764;
+
 
   --color-secondary-50: #f8fafc;
   --color-secondary-100: #f1f5f9;
@@ -27,17 +28,22 @@
   --color-secondary-900: #0f172a;
   --color-secondary-950: #020617;
 
-  --color-accent-50: #fcfdf5;
-  --color-accent-100: #f8fadc;
-  --color-accent-200: #f3f7b0;
-  --color-accent-300: #eef484;
-  --color-accent-400: #e6ee54;
-  --color-accent-500: #d9e11a;
-  --color-accent-600: #bbc40f;
-  --color-accent-700: #99a10d;
-  --color-accent-800: #7c8012;
-  --color-accent-900: #676a14;
-  --color-accent-950: #373b05;
+  /* Dracula mixed accent scale: yellow → pink → green → purple (light → dark) */
+  --color-accent-50:  #fdfbe7; /* light yellow tint */
+  --color-accent-100: #ffe7f6; /* light pink tint */
+  --color-accent-200: #e7fff2; /* light green tint */
+  --color-accent-300: #f0e7ff; /* light purple/lilac tint */
+
+  --color-accent-400: #f1fa8c; /* Dracula Yellow */
+  --color-accent-500: #ff79c6; /* Dracula Pink */
+  --color-accent-600: #50fa7b; /* Dracula Green */
+  --color-accent-700: #bd93f9; /* Dracula Purple */
+
+  --color-accent-800: #6272a4; /* Dracula Comment (dusky indigo-purple) */
+  --color-accent-900: #44475a; /* Dracula Current Line (deep slate) */
+  --color-accent-950: #282a36; /* Dracula Background (near-black) */
+
+
 
   --color-warning-50: #fefce8;
   --color-warning-100: #fef9c3;
@@ -111,7 +117,7 @@
 }
 
 @utility btn-primary {
-  @apply btn bg-accent-400 hover:bg-accent-500 text-black shadow-md hover:shadow-lg;
+  @apply btn bg-accent-700 hover:bg-accent-600 text-black shadow-md hover:shadow-lg;
 }
 
 @utility btn-secondary {
