@@ -1,0 +1,133 @@
+/* Parker Automation — dark, modern, punchy (nitpick fixes) */
+:root {
+  --pa-bg: #0b0b10;
+  --pa-surface: #12121a;
+  --pa-surface-2: #171725;
+  --pa-border: #23233a;
+  --pa-text: #e8e8f2;
+  --pa-text-2: #b9c0cf;  /* slightly lighter for readability */
+  --pa-purple: #7c3aed;
+  --pa-purple-2: #5b27c8;
+  --pa-green: #39ff88;
+  --pa-green-2: #1fd16a;
+  --pa-focus: #9d7aff;
+}
+
+/* Base */
+html, body { background: var(--pa-bg); color: var(--pa-text); }
+.text-body { color: var(--pa-text) !important; }
+.text-secondary, .lead { color: var(--pa-text-2) !important; }
+
+h1, h2, h3, h4, h5, h6 { color: var(--pa-text); letter-spacing: .2px; }
+
+/* Links */
+a { color: var(--pa-purple); text-decoration: none; }
+a:hover { color: var(--pa-green); }
+
+/* Surfaces */
+.bg-body, .bg-body-tertiary { background-color: var(--pa-bg) !important; }
+.border, .border-top, .border-bottom, .border-start, .border-end { border-color: var(--pa-border) !important; }
+.card { background: var(--pa-surface) !important; border-color: var(--pa-border) !important; }
+
+/* Navbar + toggler */
+.navbar.bg-body-tertiary { background: linear-gradient(180deg, rgba(12,12,18,.85), rgba(12,12,18,.65)) !important; backdrop-filter: saturate(120%) blur(8px); }
+.navbar-brand.brand-text { font-weight: 800; letter-spacing: .3px; }
+.nav-link { color: var(--pa-text-2) !important; }
+.nav-link:hover { color: var(--pa-text) !important; }
+.navbar-toggler { border-color: var(--pa-border) !important; }
+/* custom hamburger using our palette */
+.navbar-toggler-icon { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23b9c0cf' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important; }
+
+/* Hero */
+header { background: radial-gradient(1200px 600px at 80% -10%, rgba(124,58,237,.25), transparent),
+                   radial-gradient(900px 500px at -10% 10%, rgba(57,255,136,.08), transparent); }
+.display-4.fw-extrabold { font-weight: 900; }
+.text-highlight { color: var(--pa-text); background: linear-gradient(90deg, rgba(57,255,136,.2), rgba(124,58,237,.2)); padding: .1rem .35rem; border-radius: .5rem; }
+.hero-card.card { background: var(--pa-surface); }
+
+/* Outcome/Service/Testimonial cards */
+.outcome-card, .service-card, .testimonial-card { transition: transform .2s ease, box-shadow .2s ease; }
+.outcome-card:hover, .service-card:hover, .testimonial-card:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,.35); }
+
+/* Accent colors */
+.text-accent { color: var(--pa-green) !important; }
+.btn-accent { background: linear-gradient(90deg, var(--pa-green), #b6ffd3); color: #04240f !important; border: none !important; font-weight: 700; }
+.btn-accent:hover { filter: brightness(.95); transform: translateY(-1px); }
+.btn-outline-light { border-color: var(--pa-purple) !important; color: var(--pa-text) !important; }
+.btn-outline-light:hover { background: var(--pa-purple) !important; border-color: var(--pa-purple) !important; color: #fff !important; }
+
+/* Gradient CTA block */
+.gradient-cta { background: linear-gradient(135deg, rgba(124,58,237,.18), rgba(57,255,136,.12)); border-color: rgba(124,58,237,.35) !important; }
+
+/* Metrics */
+.metric .h2 { line-height: 1; }
+
+/* Forms */
+.form-control, .form-select, .form-check-input, textarea { background: var(--pa-surface-2); border-color: var(--pa-border); color: var(--pa-text); }
+.form-control:focus, .form-select:focus, .form-check-input:focus, textarea:focus { border-color: var(--pa-purple); box-shadow: 0 0 0 .2rem rgba(157,122,255,.25); }
+.form-check-input:checked { background-color: var(--pa-green-2); border-color: var(--pa-green-2); }
+.invalid-feedback { color: #ff9b9b; }
+
+/* WhatNextPanel */
+
+#whatNextPanel {
+  transition: all 0.6s ease;
+  transform: translateY(20px);
+}
+#whatNextPanel.showing {
+  opacity: 1 !important;
+  transform: translateY(0);
+}
+
+
+/* FAQ accordion overrides */
+.accordion-button {
+background-color: var(--pa-surface) !important;
+color: var(--pa-text) !important;
+border: 1px solid var(--pa-border) !important;
+}
+.accordion-button:not(.collapsed) {
+background-color: var(--pa-surface-2) !important;
+color: var(--pa-green) !important; /* accent color when open */
+box-shadow: none !important;
+}
+.accordion-button:focus {
+border-color: var(--pa-purple) !important;
+box-shadow: 0 0 0 .2rem rgba(157,122,255,.25) !important;
+}
+.accordion-body {
+background-color: var(--pa-surface-2) !important;
+color: var(--pa-text-2) !important;
+}
+
+/* Toast */
+.toast.text-bg-success { background: linear-gradient(90deg, rgba(57,255,136,.25), rgba(124,58,237,.25)); color: var(--pa-text); }
+
+/* Footer */
+footer .brand-text { font-weight: 800; }
+.link-secondary { color: var(--pa-text-2) !important; }
+.link-secondary:hover { color: var(--pa-text) !important; }
+
+/* Badge theming — unify to Parker green */
+.badge {
+  font-weight: 600;
+  letter-spacing: .2px;
+  padding: .35rem .6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(57,255,136,.25);
+  background: rgba(57,255,136,.12);
+  color: var(--pa-text) !important;
+  backdrop-filter: blur(2px);
+}
+.badge:hover {
+  border-color: rgba(57,255,136,.45);
+  color: #b9ffd8 !important;
+}
+
+/* Utilities */
+.lh-tight { line-height: 1.05; }
+
+/* Responsive */
+@media (max-width: 991.98px) {
+  header .display-4 { font-size: 2.25rem; }
+}
