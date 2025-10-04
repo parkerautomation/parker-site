@@ -1,51 +1,79 @@
 /*!
-* Start Bootstrap - Business Frontpage v5.0.9 (https://startbootstrap.com/template/business-frontpage)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-business-frontpage/blob/master/LICENSE)
-*/
-// This file is intentionally blank
-// Use this file to add JavaScript to your project
+ * Project: Parker Automation site JS
+ * Purpose: integrate Jotform lightbox events and drive UI feedback
+ * License: MIT
+ */
 
+// scripts.js - updated for Jotform lightbox
 
-// scripts.js — enhanced with success panel animation
+(function () {
+  document.addEventListener('DOMContentLoaded', function () {
+    const formToast = document.getElementById('formToast');
+    const whatNextPanel = document.getElementById('whatNextPanel');
 
-document.addEventListener('DOMContentLoaded', function () {
-  const form = document.getElementById('consultForm');
-  const successToast = document.getElementById('successToast');
-  const whatNextPanel = document.getElementById('whatNextPanel');
-
-  if (form) {
-    form.addEventListener('submit', async function (e) {
-      e.preventDefault();
-
-      const data = Object.fromEntries(new FormData(form).entries());
-
+    // Helper: show Bootstrap toast if present
+    function showToast(el) {
       try {
-        const res = await fetch(form.action, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data)
-        });
-
-        if (res.ok) {
-          // Show toast if available
-          if (successToast) {
-            const toast = new bootstrap.Toast(successToast);
-            toast.show();
-          }
-          // Show the "What happens next" panel with animation
-          if (whatNextPanel) {
-            whatNextPanel.classList.remove('d-none');
-            setTimeout(() => whatNextPanel.classList.add('showing'), 50);
-          }
-          form.reset();
-        } else {
-          alert('Something went wrong. Please try again.');
-        }
-      } catch (err) {
-        console.error(err);
-        alert('Error connecting to server.');
+        if (!el) return;
+        const t = new bootstrap.Toast(el);
+        t.show();
+      } catch (_) {
+        // Bootstrap not available or element missing
       }
+    }
+
+    // Helper: reveal the next-steps panel with a simple fade-in class
+    function revealNextPanel() {
+      if (!whatNextPanel) return;
+      whatNextPanel.classList.remove('d-none');
+      // allow CSS transition to kick in
+      requestAnimationFrame(() => whatNextPanel.classList.add('showing'));
+    }
+
+    // Detect Jotform postMessage events from the embedded lightbox iframe
+    function isFromJotform(origin) {
+      return /\.jotform\.com$/.test(new URL(origin).hostname) || /\.jotfor\.ms$/.test(new URL(origin).hostname);
+    }
+
+    function looksLikeSubmissionComplete(data) {
+      // Jotform messages can be strings or objects depending on embed script
+      if (!data) return false;
+      if (typeof data === 'string') {
+        return /submission|submit/i.test(data) && /complete|success/i.test(data);
+      }
+      if (typeof data === 'object') {
+        const v = (data.event || data.type || data.message || '').toString();
+        return /submission|submit/i.test(v) && /complete|success/i.test(v);
+      }
+      return false;
+    }
+
+    window.addEventListener('message', function (e) {
+      try {
+        if (!isFromJotform(e.origin)) return;
+        if (looksLikeSubmissionComplete(e.data)) {
+          showToast(formToast);
+          revealNextPanel();
+        }
+      } catch (_) {
+        // ignore parsing errors
+      }
+    }, false);
+
+    // Optional: also reveal next-steps panel when user clicks any lightbox trigger,
+    // in case submission callback does not fire in some browsers.
+    const triggers = document.querySelectorAll('.lightbox-252668097426064');
+    triggers.forEach(btn => {
+      btn.addEventListener('click', function () {
+        // pre-warm the panel for visibility after user interaction
+        // do not show toast here; only after real submission
+        // delay makes it feel responsive without being jumpy
+        setTimeout(() => {
+          if (whatNextPanel && whatNextPanel.classList.contains('d-none')) {
+            revealNextPanel();
+          }
+        }, 1200);
+      });
     });
-  }
-});
+  });
+})();

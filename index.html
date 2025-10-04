@@ -32,7 +32,8 @@
             <li class="nav-item"><a class="nav-link" href="#proof">Proof</a></li>
             <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
             <li class="nav-item">
-              <a class="btn btn-accent ms-lg-2" href="#contact">Book Free Consultation</a>
+              <!-- CTA opens Jotform lightbox -->
+              <a class="btn btn-accent ms-lg-2 lightbox-252668097426064" href="#">Book Free Consultation</a>
             </li>
           </ul>
         </div>
@@ -51,7 +52,8 @@
               <strong>reduce errors</strong>, and <strong>book more jobs</strong>, without adding headcount.
             </p>
             <div class="d-flex flex-wrap gap-3">
-              <a href="#contact" class="btn btn-accent btn-lg">Book Free Consultation</a>
+              <!-- CTA opens Jotform lightbox -->
+              <a href="#" class="btn btn-accent btn-lg lightbox-252668097426064">Book Free Consultation</a>
               <a href="#services" class="btn btn-outline-light btn-lg">See How It Works</a>
             </div>
             <div class="d-flex gap-3 gap-lg-4 mt-4 small">
@@ -68,7 +70,7 @@
                 </h6>
                 <div class="row g-3 text-center">
                   <div class="col"><div class="metric"><div class="h2 fw-bold">47</div><div class="small text-secondary">Leads</div></div></div>
-                  <div class="col"><div class="metric"><div class="h2 fw-bold">100%</div><div class="small text-secondary">Responded < 60s</div></div></div>
+                  <div class="col"><div class="metric"><div class="h2 fw-bold">100%</div><div class="small text-secondary">Responded &lt; 60s</div></div></div>
                   <div class="col"><div class="metric"><div class="h2 fw-bold">28</div><div class="small text-secondary">Bookings</div></div></div>
                 </div>
                 <hr class="my-4" />
@@ -99,7 +101,7 @@
           <div class="col-md-4">
             <div class="card h-100 border-0 outcome-card">
               <div class="card-body">
-                <div class="display-6 fw-bold text-accent">< 60s</div>
+                <div class="display-6 fw-bold text-accent">&lt; 60s</div>
                 <h5 class="mt-2">Lead response time</h5>
                 <p class="text-secondary">Speed wins. Instant replies stop prospects from calling your competitor.</p>
               </div>
@@ -186,14 +188,12 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
 
         <div class="mt-5 p-4 p-lg-5 rounded-4 border gradient-cta text-center">
           <h3 class="mb-2">Focus on your jobsite, not your website</h3>
           <p class="text-secondary mb-3">We design, implement, and maintain the boring bits so your crew can work.</p>
-          <a href="#contact" class="btn btn-accent btn-lg">Book Free Consultation</a>
+          <!-- CTA opens Jotform lightbox -->
+          <a href="#" class="btn btn-accent btn-lg lightbox-252668097426064">Book Free Consultation</a>
         </div>
       </div>
     </section>
@@ -307,17 +307,17 @@
     <!-- CONTACT -->
     <section id="contact" class="py-5 border-top">
       <div class="container">
-        <div class="row g-4 align-items-start">
-          <div class="col-lg-6">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-8">
             <h2 class="fw-bold mb-2">Book a free consultation</h2>
             <p class="text-secondary">A 20-minute consult can unlock hours every week and pay for itself fast. Why wait? Let’s chat.</p>
-            <div data-tf-live="01K5QTB3B43Y3V3BEDDAXAMEY9"></div>
-            <script src="//embed.typeform.com/next/embed.js"></script>
 
-          <div class="col-lg-5 offset-lg-1">
-            <div id="whatNextPanel" class="p-4 rounded-4 border bg-body-tertiary d-none opacity-0">
+            <!-- Replaced Typeform with a button that triggers the Jotform lightbox -->
+            <a href="#" class="btn btn-accent btn-lg lightbox-252668097426064">Open Consultation Form</a>
+
+            <div id="whatNextPanel" class="p-4 rounded-4 border bg-body-tertiary d-none opacity-0 mt-4">
               <h5 class="mb-3">What happens next</h5>
-              <ol class="mb-0 text-secondary small ps-3">
+              <ol class="mb-0 text-secondary small ps-3 text-start">
                 <li>You submit the form (no spam).</li>
                 <li>We reply within 1 business day to schedule a call.</li>
                 <li>We map 1–2 immediate wins and a simple rollout.</li>
@@ -328,10 +328,8 @@
       </div>
     </section>
 
-    <!-- AI BOT -->
-
-    <script src='https://cdn.jotfor.ms/agent/embedjs/01995e668b757799a4607da3956cbb79ce54/embed.js'>
-    </script>
+    <!-- (Optional) Jotform AI Assistant widget - remove this script if you don't want it -->
+    <script src='https://cdn.jotfor.ms/agent/embedjs/01995e668b757799a4607da3956cbb79ce54/embed.js'></script>
 
     <!-- FOOTER -->
     <footer class="py-5 border-top">
@@ -359,6 +357,24 @@
         </div>
       </div>
     </div>
+
+    <!-- Jotform Lightbox (added once, before Bootstrap bundle and your scripts) -->
+    <script src ="https://cdn.jotfor.ms/s/static/latest/static/feedback2.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      var JFL_252668097426064 = new JotformFeedback({
+        formId: '252668097426064',
+        base: 'https://form.jotform.com/',
+        windowTitle: 'Consultation Form',
+        backgroundColor: '#FFA500',
+        fontColor: '#FFFFFF',
+        type: 'false',
+        height: 500,
+        width: 700,
+        openOnLoad: false
+      });
+    </script>
+    <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
+    <script>window.jotformEmbedHandler("iframe[id='252668097426064']", "https://form.jotform.com/")</script>
 
     <!-- Bootstrap + App scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
